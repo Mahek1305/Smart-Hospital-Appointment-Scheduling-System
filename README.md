@@ -1,140 +1,117 @@
-🏥 Smart Hospital Appointment Scheduling System
+# Smart Hospital Appointment Scheduling System
 
-A Streamlit-based web application that intelligently schedules hospital patient appointments using Multilevel Queue Scheduling and Priority Queue algorithms.
-The system ensures emergency and critical patients are prioritized, while maintaining fairness for non-emergency cases.
+## Project Overview
 
-📌 Project Overview
+The Smart Hospital Appointment Scheduling System is a Streamlit-based web application designed to manage and schedule hospital patient appointments efficiently. The system uses Multilevel Queue Scheduling and Priority Queue algorithms to ensure that emergency and critical patients are given higher priority while maintaining fairness for all patients.
 
-Hospitals often face challenges in managing patient appointments efficiently, especially when multiple patients arrive with varying levels of urgency.
-This project addresses the problem by implementing an automated, priority-based scheduling system that:
+This project applies core concepts of Operating Systems and Data Structures to a real-world healthcare problem.
 
-Collects patient details (disease, emergency level, severity)
+---
 
-Assigns appointment slots dynamically
+## Objectives
 
-Prioritizes emergency and critical patients
+* To automate hospital appointment scheduling
+* To prioritize patients based on emergency level and disease severity
+* To reduce waiting time for critical patients
+* To implement Multilevel Queue Scheduling using Priority Queues
+* To provide a user-friendly web interface using Streamlit
 
-Displays a real-time scheduled appointment list
+---
 
-🎯 Objectives
+## Features
 
-To implement Multilevel Queue Scheduling in a real-world healthcare scenario
+* Patient registration with personal and disease details
+* Emergency-based prioritization (High, Medium, Low)
+* Severity-based scheduling within the same emergency level
+* Automatic appointment time allocation
+* Real-time appointment schedule display
+* FIFO-based fair scheduling for same-priority patients
+* Option to clear all appointments
 
-To use Priority Queues for efficient appointment allocation
+---
 
-To reduce patient waiting time for emergency cases
+## Scheduling Logic
 
-To provide an interactive and user-friendly hospital scheduling system
-
-⚙️ System Features
-
-📋 Patient registration with disease details
-
-🚨 Emergency-level based prioritization (High / Medium / Low)
-
-📊 Severity-based scheduling within the same emergency level
-
-⏱ Automatic appointment time allocation
-
-🔁 Fair scheduling using FIFO for same-priority patients
-
-📅 Real-time appointment schedule display
-
-❌ Option to clear all appointments
-
-🧠 Scheduling Logic
-
-The system uses a Priority Queue (heapq) with the following priority tuple:
+The system uses a Priority Queue with the following priority tuple:
 
 (Emergency Priority, -Severity, Arrival Time)
 
-Priority Rules:
+Priority rules:
 
-High Emergency → Scheduled first
+* High emergency patients are scheduled first
+* Higher disease severity gets higher priority
+* Earlier arrival time ensures fair FIFO scheduling
 
-Higher severity → Higher priority
+---
 
-Earlier arrival → FIFO order
+## Technology Stack
 
-🏗️ Tech Stack
-Component	Technology
-Frontend	Streamlit
-Backend	Python
-Scheduling Algorithm	Priority Queue (heapq)
-Data Handling	Pandas
-Time Management	datetime
-State Management	Streamlit Session State
-🖥️ Application Interface
+* Programming Language: Python
+* Web Framework: Streamlit
+* Scheduling Algorithm: Priority Queue (heapq)
+* Data Handling: Pandas
+* Time Management: datetime
+* State Management: Streamlit Session State
 
-The application provides:
+---
 
-A patient entry form
+## How to Run the Project
 
-A dynamically updated appointment schedule
+1. Install the required libraries:
 
-A separate section highlighting high-emergency patients
-
-🚀 How to Run the Project
-1️⃣ Install Dependencies
 pip install streamlit pandas
 
-2️⃣ Run the Application
+2. Run the Streamlit application:
+
 streamlit run app.py
 
-3️⃣ Open in Browser
-http://localhost:8501
+3. Open the application in your browser:
 
-📂 Project Structure
+[http://localhost:8501](http://localhost:8501)
+
+---
+
+## Project Structure
+
 Hospital-Appointment-Scheduler/
 │
-├── app.py          # Main Streamlit application
-├── README.md       # Project documentation
+├── app.py
+├── README.md
 
-🧪 Example Use Case
+---
 
-A patient with high emergency & severe condition is added
+## Example Workflow
 
-A patient with low emergency & mild condition is added
+1. A patient enters their details including disease and emergency level
+2. The system assigns a priority based on urgency and severity
+3. Emergency patients are scheduled first
+4. Appointment times are generated automatically
+5. The final appointment schedule is displayed in real time
 
-The system schedules the emergency patient first
+---
 
-Appointment times are generated automatically
+## Advantages
 
-📈 Advantages
+* Efficient hospital queue management
+* Faster handling of emergency cases
+* Fair scheduling for non-emergency patients
+* Scalable and modular system design
+* Real-world application of OS scheduling algorithms
 
-Efficient handling of hospital queues
+---
 
-Reduced waiting time for critical patients
+## Future Enhancements
 
-Scalable and extensible system design
+* Database integration (SQLite/MySQL)
+* Doctor-wise appointment scheduling
+* Machine learning-based waiting time prediction
+* Role-based access (Admin/Receptionist)
+* Appointment history and analytics dashboard
 
-Suitable for real-world hospital environments
+---
 
-🔮 Future Enhancements
+## Conclusion
 
-Integration with SQLite / MySQL database
+This project demonstrates the practical implementation of Operating System scheduling concepts and data structures in a real-world healthcare environment. It highlights efficient resource management, algorithmic thinking, and modern web application development using Python and Streamlit.
 
-Doctor-wise appointment scheduling
 
-ML-based waiting time prediction
-
-Role-based login (Admin / Receptionist)
-
-Appointment history and analytics dashboard
-
-📄 Resume Description (Ready to Use)
-
-Smart Hospital Appointment Scheduling System
-
-Developed a Streamlit-based web application using Priority Queue and Multilevel Scheduling algorithms to automate hospital appointment management.
-
-Implemented emergency and severity-based prioritization to ensure critical patients receive timely appointments.
-
-Designed a fair and efficient scheduling mechanism using FIFO-based priority handling.
-
-Tech Stack: Python, Streamlit, heapq, Pandas
-
-🙌 Conclusion
-
-This project demonstrates the practical application of Operating System scheduling concepts, data structures, and web application development in the healthcare domain.
-It serves as a strong major project showcasing algorithmic thinking and real-world problem-solving skills.
