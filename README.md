@@ -88,6 +88,8 @@ Hospital-Appointment-Scheduler/
 4. Appointment times are generated automatically
 5. The final appointment schedule is displayed in real time
 
+![image alt]( https://github.com/Mahek1305/Smart-Hospital-Appointment-Scheduling-System/blob/main/Screenshot%202026-01-02%20134150.png )
+![image alt]( https://github.com/Mahek1305/Smart-Hospital-Appointment-Scheduling-System/blob/main/Screenshot%202026-01-02%20134204.png )
 ---
 
 ## Advantages
